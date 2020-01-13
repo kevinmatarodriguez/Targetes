@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>targetes_flexbox</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+          min-height: 100%;  
+        }
+        img{
+            width: 100%;
+        }
+        body{
+            font-family: "Georgia" cursive;
+            font-size: 18px;
+            background: linear-gradient(38deg,blue,purple);
+            color: purple;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2em 4em;
+            justify-content: center;
+		border-radius: 20px;;
+        }
+        .dissenyador{
+            display: flex;
+            flex-direction: column;
+            width: 25em;
+            margin: 1em;
+            background: rgba(240,240,240,0.9);
+            border-radius: 20px;
+            box-shadow: 0 0 30px purple;
+        }
+        .dissenyador_img{
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            background: purple;
+        }
+        .dissenyador_img img{
+	    border-radius: 20px 20px 0 0;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: hard-light;
+        }
+        .dissenyador:first-child .dissenyador_img img{
+            object-position: right;
+        }
+        .dissenyador:last-child .dissenyador_img img{
+            object-position: center;
+        }
+        header{
+            display: flex;
+            margin: 0.5em 1em;
+            justify-content: space-between;
+            border-bottom: 1px solid purple;
+            align-items: baseline;
+        }
+        h3{
+            font-style: italic;
+            font-weight: bold;
+        }
+        span{
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 0.9em;
+        }
+        .dissenyador_contingut{
+            display: flex;
+            flex-grow: 1;
+            margin: 1em 1em 0.5em 1em;
+            font-size: 0.9em;
+            line-height: 1.4em;
+            text-align: justify;
+            hyphens: auto;
+        }
+        footer{
+            background: purple;
+            color: white;
+            font-size: 0.9em;
+            font-style: italic;
+            border-radius: 0 0 20px 20px;
+            padding: 0.6em;
+        }
+        @media(max-width:600px){
+            body{
+                font-size: 16px;
+            }
+            .container{
+                flex-direction: column;
+            }
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/ola1.jpg" alt="Tamás Waliczky">
+            </div>
+            <header>
+                <h3>Tamás Waliczky</h3>
+                <span>1972</span>
+            </header>
+            <p class="dissenyador_contingut">
+                He began working with computers in 1983.[1] He was artist-in-residence at the Zentrum für Kunst und Medientechnologie (ZKM) in 1992, and subsequently a member of the Institute's research staff (1993–1997) before taking up a guest professorship at the HBK Saar, Saarbrücken (1997–2002). IAMAS in Gifu, Japan, chose Waliczky as artist-in-residence for 1998/99. From 2003 until 2005 he was professor at IMG, Fachhochschule Mainz. From 2005 to 2010 he was at HBK Saar, this time as a full-time professor. As of 2010, he is a professor at the School of Creative Media at the City University of Hong Kong. His works have won numerous international awards, including the 1989 Golden Nica at the Prix Ars Electronica, Linz, and has been shown in several exhibitions worldwide, including the Lyon Biennale, the ICC Gallery Tokyo, and the Multimediale Karlsruhe.[1] His works are currently in several public collections, including the Centre Georges Pompidou, Paris or the Ludwig Museum, Budapest. Tamas Waliczky has been selected to represent Hungary at the Fifty-Eighth Venice Biennale, 2019.
+            </p>
+            <footer class="dissenyador_peu">
+             Tamás Waliczky, born in 1959, in Budapest, Hungary, works as a media artist. He started out by creating cartoon films (1968–83), whilst working as a painter, illustrator and photographer   
+            </footer>
+        </div>
+        <div class="dissenyador">
+            <div class="dissenyador_img">
+                <img src="img/ola2.jpg" alt="Paula Scher">
+            </div>
+            <header>
+                <h3>Paula Scher</h3>
+                <span>1948</span>
+        </header>
+        <p class="dissenyador_contingut">
+         Scher has developed identity and branding systems, promotional materials, environmental graphics, packaging and publication designs for a broad range of clients that includes, among others, Bloomberg, Microsoft, Bausch + Lomb, Coca-Cola, Shake Shack, Perry Ellis, the Museum of Modern Art, the Sundance Institute, the High Line, Jazz at Lincoln Center, the Metropolitan Opera, the New York City Ballet, the New York Philharmonic, the New Jersey Performing Arts Center, the New 42nd Street, the New York Botanical Garden, the United States Holocaust Memorial Museum, the Philadelphia Museum of Art, the Robin Hood Foundation, and the New York City Department of Parks and Recreation. In 1996 Scher’s widely imitated identity for The Public Theater won the coveted Beacon Award for integrated corporate design strategy. She has served on the board of directors of The Public Theater, and is a frequent design contributor to The New York Times, GQ and other publications. She served on the Public Design Commission of the City of New York from 2006 to 2015.  
+        </p>
+        <footer class="dissenyador_peu">
+          Paula Scher is one of the most influential graphic designers in the world. Described as the “master conjurer of the instantly familiar,” Scher straddles the line between pop culture and fine art in her work. 
+        </footer>
+        </div>
+    </div>
+</body>
+</html>
